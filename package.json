@@ -70,6 +70,16 @@
     ],
     "all": true
   },
+  "ava": {
+    "files": [
+      "test/**/*.test.ts"
+    ],
+    "extensions": [
+      "ts",
+      "js"
+    ],
+    "timeout": "2m"
+  },
   "prettier": {
     "printWidth": 120,
     "bracketSpacing": true
