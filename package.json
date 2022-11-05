@@ -90,8 +90,7 @@
     "bracketSpacing": true
   },
   "lint-staged": {
-    "*.ts": "npm run xo --fix",
-    "*": "commitlint"
+    "*.ts": "npm run xo --fix"
   },
   "commitlint": {
     "extends": [
