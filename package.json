@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "xo",
     "test": "c8 ava -v",
-    "test:ci": "c8 ava -v"
+    "test:ci": "c8 ava -v",
+    "prepare": "husky install"
   },
   "keywords": [
     "mkcert",
@@ -27,6 +28,7 @@
     "@types/semver": "^7.3.13",
     "ava": "^5.0.1",
     "c8": "^7.12.0",
+    "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "typescript": "^4.8.4",
     "xo": "^0.52.4"
