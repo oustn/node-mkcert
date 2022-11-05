@@ -1,13 +1,12 @@
-import {BaseSource, Release} from './base'
-import {GithubSource} from './github'
+import type { BaseSource } from './base';
+import { GithubSource } from './github';
 
 function createSource(source: string): BaseSource {
-  return new GithubSource()
+  return new GithubSource();
 }
 
+export { createSource };
 
-export {
-  createSource,
-  BaseSource,
-  Release,
-}
+export type { Release } from './base';
+
+export { BaseSource } from './base';

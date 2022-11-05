@@ -5,7 +5,6 @@ name: Release
       - master
       - next
       - beta
-      - dev
 jobs:
   release:
     name: release
@@ -17,6 +16,7 @@ jobs:
           cache: npm
           node-version: 16
       - run: npm ci
+      - run: npx tsc
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

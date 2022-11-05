@@ -1,13 +1,12 @@
 {
   "name": "node-mkcert",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A wrapper for native mkcert",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "release-it",
-    "prerelease": "tsc",
-    "prepublishOnly": "tsc"
+    "lint": "xo",
+    "test": "c8 ava -v",
+    "test:ci": "c8 ava -v"
   },
   "keywords": [
     "mkcert",
@@ -19,13 +18,15 @@
     "lib"
   ],
   "author": "oustn zeng",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^18.11.7",
     "@types/semver": "^7.3.13",
-    "release-it": "^15.5.0",
-    "typescript": "^4.8.4"
+    "ava": "^5.0.1",
+    "c8": "^7.12.0",
+    "typescript": "^4.8.4",
+    "xo": "^0.52.4"
   },
   "dependencies": {
     "@octokit/rest": "^19.0.5",
@@ -38,13 +39,39 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "release-it": {
-    "git": {
-      "tag": false,
-      "commitMessage": "chore: release @mypaas/hcm-cli@${version}"
-    },
-    "npm": {
-      "timeout": 10
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oustn/node-mkcert.git"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "rules": {
+      "unicorn/no-reduce": "off",
+      "unicorn/string-content": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "ts": "never"
+        }
+      ]
     }
+  },
+  "c8": {
+    "include": [
+      "src"
+    ],
+    "reporter": [
+      "json",
+      "text",
+      "html"
+    ],
+    "all": true
+  },
+  "prettier": {
+    "printWidth": 120,
+    "bracketSpacing": true
   }
 }

@@ -1,0 +1,14 @@
+{
+  "extends": ["config:base"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies", "action"],
+      "automerge": true
+    }
+  ]
+}
