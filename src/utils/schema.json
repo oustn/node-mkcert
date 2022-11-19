@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "install": {
+      "type": "boolean"
+    },
+    "uninstall": {
+      "type": "boolean"
+    },
+    "certFile": {
+      "type": "string"
+    },
+    "keyFile": {
+      "type": "string"
+    },
+    "p12File": {
+      "type": "string"
+    },
+    "client": {
+      "type": "boolean"
+    },
+    "ecdsa": {
+      "type": "boolean"
+    },
+    "pkcs12": {
+      "type": "boolean"
+    },
+    "csr": {
+      "type": "string"
+    },
+    "CAROOT": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
