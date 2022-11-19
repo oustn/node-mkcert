@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "xo",
+    "lint-fix": "xo --fix",
     "test": "c8 ava -v",
     "test:ci": "c8 ava -v",
     "prepare": "husky install"
@@ -34,11 +35,7 @@
     "xo": "^0.52.4"
   },
   "dependencies": {
-    "@octokit/rest": "^19.0.5",
-    "execa": "~5.1.1",
-    "fs-extra": "^10.1.0",
-    "node-downloader-helper": "^2.1.4",
-    "semver": "^7.3.8"
+    "fs-extra": "^10.1.0"
   },
   "publishConfig": {
     "access": "public",
@@ -90,7 +87,7 @@
     "bracketSpacing": true
   },
   "lint-staged": {
-    "*.ts": "npm run xo --fix"
+    "*.ts": "npm run lint-fix"
   },
   "commitlint": {
     "extends": [
