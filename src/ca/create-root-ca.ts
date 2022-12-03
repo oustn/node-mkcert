@@ -1,5 +1,5 @@
 import {pki, md} from 'node-forge';
-import {Attributes, RootCA} from '@/types'
+import {Attributes, RootCA} from '../types'
 
 const bits = 2048;
 const oneDay = 1000 * 60 * 60 * 24;

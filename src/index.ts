@@ -42,9 +42,15 @@ class Mkcert {
     }
 
     ensureDirSync(this.CAROOT);
+
+    this.loadCA();
   }
 
   async sign(hosts: string[]) {}
+
+  private loadCA() {
+
+  }
 }
 
 function sign(hosts: string[], options: Options) {

@@ -1,7 +1,7 @@
 import {Options} from "./types";
 import {getOption} from "./utils/get-option";
 import {getCARoot, Mkcert} from './index'
-import validate from "@/utils/validate";
+import validate from "./utils/validate";
 
 export default async function (hosts: string[], options: Options) {
   const parsedOptions = getOption(options);

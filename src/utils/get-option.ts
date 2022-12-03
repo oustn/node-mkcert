@@ -1,5 +1,5 @@
 import {validate} from 'schema-utils';
-import {Options, ObjectEntry, OptionsRequired} from "@/types";
+import {Options, ObjectEntry, OptionsRequired} from "../types";
 import schema from './schema.json';
 import {JSONSchema7} from "schema-utils/declarations/validate";
 
