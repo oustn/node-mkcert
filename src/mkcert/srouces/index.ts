@@ -1,8 +1,9 @@
 import type { BaseSource } from './base';
 import { GithubSource } from './github';
+import { OssSource } from './oss'
 
 function createSource(source: string): BaseSource {
-  return new GithubSource();
+  return new OssSource();
 }
 
 export { createSource };

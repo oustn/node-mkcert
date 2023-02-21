@@ -10,7 +10,6 @@ class GithubSource extends BaseSource {
   constructor() {
     super();
     this.octokit = new Octokit({
-      auth: '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',
     });
   }
 
@@ -60,7 +59,7 @@ class GithubSource extends BaseSource {
   ): Release | undefined {
     if (!data || !data.tag_name) return;
 
-    const downloadUrl = data.assets.find((item) =>
+    const downloadUrl = data.assets.find((item: any) =>
       item.name.includes(target),
     )?.browser_download_url;
 
