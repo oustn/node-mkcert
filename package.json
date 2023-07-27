@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^19.0.5",
-    "execa": "~5.1.1",
+    "execa": "~7.2.0",
     "fs-extra": "^10.1.0",
     "node-downloader-helper": "^2.1.4",
     "semver": "^7.3.8"
